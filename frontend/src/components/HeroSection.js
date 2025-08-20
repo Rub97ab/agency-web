@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ArrowRight, Code, Smartphone, Globe } from "lucide-react";
+import { ArrowRight, Code, Smartphone, Globe, Database, Server, Zap, Settings, Cloud, Monitor, Cpu, Shield } from "lucide-react";
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -56,7 +56,7 @@ const HeroSection = () => {
         </p>
         
         <div className={`flex flex-col sm:flex-row gap-6 justify-center items-center ${isVisible ? 'animate-fade-in-up animate-delay-4' : 'opacity-0'}`}>
-          <button onClick={scrollToContact} className="btn-primary btn-shine group animate-pulse">
+          <button onClick={scrollToContact} className="btn-primary btn-shine group">
             Start Your Project
             <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
           </button>
@@ -92,11 +92,31 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Animated Background Elements */}
-      <div className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full animate-ping opacity-20"></div>
-      <div className="absolute top-40 right-32 w-1 h-1 bg-cyan-400 rounded-full animate-pulse opacity-30"></div>
-      <div className="absolute bottom-32 left-32 w-3 h-3 bg-cyan-400 rounded-full animate-bounce opacity-10"></div>
-      <div className="absolute bottom-20 right-20 w-1 h-1 bg-cyan-400 rounded-full animate-ping opacity-20"></div>
+      {/* Animated Background Elements - Diverse Icons */}
+      <div className="absolute top-20 left-20 animate-float opacity-10" style={{ animationDelay: '0s' }}>
+        <Database size={24} className="text-cyan-400" />
+      </div>
+      <div className="absolute top-40 right-32 animate-float opacity-15" style={{ animationDelay: '1s' }}>
+        <Server size={20} className="text-cyan-400" />
+      </div>
+      <div className="absolute bottom-32 left-32 animate-float opacity-10" style={{ animationDelay: '2s' }}>
+        <Cloud size={28} className="text-cyan-400" />
+      </div>
+      <div className="absolute bottom-20 right-20 animate-float opacity-20" style={{ animationDelay: '3s' }}>
+        <Monitor size={16} className="text-cyan-400" />
+      </div>
+      <div className="absolute top-1/2 left-10 animate-float opacity-15" style={{ animationDelay: '4s' }}>
+        <Zap size={20} className="text-cyan-400" />
+      </div>
+      <div className="absolute top-1/3 right-10 animate-float opacity-25" style={{ animationDelay: '5s' }}>
+        <Settings size={22} className="text-cyan-400" />
+      </div>
+      <div className="absolute top-3/4 left-1/4 animate-float opacity-12" style={{ animationDelay: '6s' }}>
+        <Cpu size={18} className="text-cyan-400" />
+      </div>
+      <div className="absolute top-1/4 right-1/3 animate-float opacity-18" style={{ animationDelay: '7s' }}>
+        <Shield size={26} className="text-cyan-400" />
+      </div>
     </section>
   );
 };

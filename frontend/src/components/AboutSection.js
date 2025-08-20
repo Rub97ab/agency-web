@@ -1,5 +1,5 @@
 import React from "react";
-import { Users, Target, Award, Lightbulb } from "lucide-react";
+import { Users, Target, Award, Lightbulb, Layers, Rocket, Brain, Heart } from "lucide-react";
 
 const AboutSection = () => {
   const values = [
@@ -26,8 +26,22 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-24 px-4 lg:px-8 bg-gray-900">
-      <div className="max-w-7xl mx-auto">
+    <section id="about" className="py-24 px-4 lg:px-8 bg-gray-900 relative overflow-hidden">
+      {/* Floating animated icons */}
+      <div className="absolute top-16 left-16 animate-float opacity-10" style={{ animationDelay: '0s' }}>
+        <Layers size={32} className="text-cyan-400" />
+      </div>
+      <div className="absolute top-32 right-20 animate-float opacity-15" style={{ animationDelay: '2s' }}>
+        <Rocket size={28} className="text-cyan-400" />
+      </div>
+      <div className="absolute bottom-24 left-24 animate-float opacity-12" style={{ animationDelay: '4s' }}>
+        <Brain size={26} className="text-cyan-400" />
+      </div>
+      <div className="absolute bottom-40 right-16 animate-float opacity-18" style={{ animationDelay: '6s' }}>
+        <Heart size={22} className="text-cyan-400" />
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="display-large mb-6 text-white">About Coders</h2>

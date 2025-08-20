@@ -59,7 +59,7 @@ const TestimonialsSection = () => {
     {
       id: 6,
       name: "James Wilson",
-      position: "CEO",
+      position: "CEO",  
       company: "Corporate Dynamics",
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80",
       rating: 5,
@@ -86,14 +86,6 @@ const TestimonialsSection = () => {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTestimonial(prev => (prev + 1) % testimonials.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [testimonials.length]);
-
   const nextTestimonial = () => {
     setCurrentTestimonial(prev => (prev + 1) % testimonials.length);
   };
@@ -108,11 +100,11 @@ const TestimonialsSection = () => {
     <section id="testimonials" className="py-24 px-4 lg:px-8 relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>
-      <div className="absolute top-20 left-20 w-64 h-64 bg-cyan-400/5 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-400/3 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-20 left-20 w-64 h-64 bg-cyan-400/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-400/3 rounded-full blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className={`text-center mb-16 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
+        <div className="text-center mb-16">
           <h2 className="display-large mb-6 text-white text-glow">
             What Our Clients Say
           </h2>
@@ -122,7 +114,7 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Main testimonial */}
-        <div className={`max-w-4xl mx-auto ${isVisible ? 'animate-fade-in-up animate-delay-1' : 'opacity-0'}`}>
+        <div className="max-w-4xl mx-auto">
           <div className="bg-black border border-gray-800 rounded-2xl p-8 md:p-12 relative overflow-hidden group hover:border-cyan-400 transition-all duration-500">
             {/* Quote decoration */}
             <div className="absolute top-8 left-8 text-cyan-400/20 group-hover:text-cyan-400/40 transition-colors duration-500">
@@ -134,8 +126,7 @@ const TestimonialsSection = () => {
               {[...Array(currentTestimonialData.rating)].map((_, i) => (
                 <Star
                   key={i}
-                  className="w-6 h-6 text-yellow-400 fill-current animate-pulse"
-                  style={{ animationDelay: `${i * 0.1}s` }}
+                  className="w-6 h-6 text-yellow-400 fill-current"
                 />
               ))}
             </div>
@@ -150,10 +141,10 @@ const TestimonialsSection = () => {
               <img
                 src={currentTestimonialData.image}
                 alt={currentTestimonialData.name}
-                className="w-16 h-16 rounded-full border-2 border-cyan-400 group-hover:scale-110 transition-transform duration-300"
+                className="w-16 h-16 rounded-full border-2 border-cyan-400"
               />
               <div className="text-center">
-                <h4 className="text-white font-semibold text-lg group-hover:text-cyan-400 transition-colors duration-300">
+                <h4 className="text-white font-semibold text-lg">
                   {currentTestimonialData.name}
                 </h4>
                 <p className="text-gray-400">
@@ -168,20 +159,16 @@ const TestimonialsSection = () => {
             {/* Navigation arrows */}
             <button
               onClick={prevTestimonial}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-gray-800 hover:bg-cyan-400 text-white hover:text-black rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-gray-800 hover:bg-cyan-400 text-white hover:text-black rounded-full flex items-center justify-center transition-all duration-300"
             >
               <ChevronLeft size={24} />
             </button>
             <button
               onClick={nextTestimonial}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-gray-800 hover:bg-cyan-400 text-white hover:text-black rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-gray-800 hover:bg-cyan-400 text-white hover:text-black rounded-full flex items-center justify-center transition-all duration-300"
             >
               <ChevronRight size={24} />
             </button>
-
-            {/* Animated glow effect */}
-            <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" 
-                 style={{ boxShadow: `inset 0 0 30px rgba(0, 255, 209, 0.1)` }}></div>
           </div>
 
           {/* Testimonial indicators */}
@@ -196,26 +183,6 @@ const TestimonialsSection = () => {
                     : 'bg-gray-600 hover:bg-gray-500'
                 }`}
               />
-            ))}
-          </div>
-        </div>
-
-        {/* Client logos */}
-        <div className={`mt-16 ${isVisible ? 'animate-fade-in-up animate-delay-2' : 'opacity-0'}`}>
-          <h3 className="text-center text-gray-400 mb-8">Trusted by innovative companies</h3>
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-8 items-center opacity-60">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="text-center group cursor-pointer"
-                onClick={() => setCurrentTestimonial(index)}
-              >
-                <div className="bg-gray-800 hover:bg-gray-700 rounded-lg p-4 transition-all duration-300 group-hover:scale-105">
-                  <div className="font-bold text-cyan-400 text-sm group-hover:text-cyan-300">
-                    {testimonial.company}
-                  </div>
-                </div>
-              </div>
             ))}
           </div>
         </div>

@@ -27,6 +27,11 @@
   padding-top: 80px;
 }
 
+/* Section padding to prevent header overlap */
+section {
+  scroll-margin-top: 100px;
+}
+
 /* Dark Theme Header */
 .dark-header {
   background: var(--bg-primary);

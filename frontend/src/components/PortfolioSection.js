@@ -1,9 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ExternalLink, Github, Smartphone, Globe, Eye } from "lucide-react";
+import ProjectModal from "./ProjectModal";
 
 const PortfolioSection = () => {
   const [visibleCards, setVisibleCards] = useState([]);
   const [hoveredCard, setHoveredCard] = useState(null);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const sectionRef = useRef(null);
 
   const projects = [
@@ -90,6 +93,16 @@ const PortfolioSection = () => {
     return () => observer.disconnect();
   }, []);
 
+  const openProjectModal = (project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const closeProjectModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
+  };
+
   return (
     <section id="portfolio" className="py-24 px-4 lg:px-8" ref={sectionRef}>
       <div className="max-w-7xl mx-auto">
@@ -122,14 +135,17 @@ const PortfolioSection = () => {
                 {/* Animated overlay */}
                 <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <div className="flex space-x-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <button className="p-3 bg-cyan-400 text-black rounded-full hover:bg-cyan-300 transition-all duration-300 hover:scale-110 animate-bounce">
+                    <button 
+                      onClick={() => openProjectModal(project)}
+                      className="p-3 bg-cyan-400 text-black rounded-full hover:bg-cyan-300 transition-all duration-300 hover:scale-110 animate-bounce"
+                    >
+                      <Eye size={18} />
+                    </button>
+                    <button className="p-3 bg-purple-600 text-white rounded-full hover:bg-purple-500 transition-all duration-300 hover:scale-110 animate-bounce" style={{ animationDelay: '0.1s' }}>
                       <ExternalLink size={18} />
                     </button>
-                    <button className="p-3 bg-gray-700 text-white rounded-full hover:bg-gray-600 transition-all duration-300 hover:scale-110 animate-bounce" style={{ animationDelay: '0.1s' }}>
+                    <button className="p-3 bg-gray-700 text-white rounded-full hover:bg-gray-600 transition-all duration-300 hover:scale-110 animate-bounce" style={{ animationDelay: '0.2s' }}>
                       <Github size={18} />
-                    </button>
-                    <button className="p-3 bg-purple-600 text-white rounded-full hover:bg-purple-500 transition-all duration-300 hover:scale-110 animate-bounce" style={{ animationDelay: '0.2s' }}>
-                      <Eye size={18} />
                     </button>
                   </div>
                 </div>
@@ -193,6 +209,13 @@ const PortfolioSection = () => {
         <div className="absolute -top-10 -left-10 w-20 h-20 border border-cyan-400 rounded-full opacity-10 animate-spin" style={{ animationDuration: '20s' }}></div>
         <div className="absolute -bottom-10 -right-10 w-16 h-16 border border-cyan-400 rounded-full opacity-10 animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}></div>
       </div>
+
+      {/* Project Modal */}
+      <ProjectModal 
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={closeProjectModal}
+      />
     </section>
   );
 };

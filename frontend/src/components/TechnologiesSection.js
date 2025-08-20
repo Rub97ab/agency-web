@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Database, Cloud, Smartphone, Globe, Code, Server, Zap, Link, Settings } from "lucide-react";
 
 const TechnologiesSection = () => {
   const [visibleTechs, setVisibleTechs] = useState([]);
@@ -7,112 +8,112 @@ const TechnologiesSection = () => {
     {
       name: "React",
       category: "Frontend",
-      icon: "⚛️",
+      icon: <Code size={32} className="text-blue-400" />,
       color: "text-blue-400",
       description: "Modern UI library"
     },
     {
       name: "Next.js",
       category: "Frontend",
-      icon: "▲",
+      icon: <Globe size={32} className="text-white" />,
       color: "text-white",
       description: "Full-stack framework"
     },
     {
       name: "Vue",
       category: "Frontend", 
-      icon: "🖖",
+      icon: <Code size={32} className="text-green-400" />,
       color: "text-green-400",
       description: "Progressive framework"
     },
     {
       name: "Python",
       category: "Backend",
-      icon: "🐍",
+      icon: <Server size={32} className="text-yellow-400" />,
       color: "text-yellow-400",
       description: "Versatile programming"
     },
     {
       name: "Node.js",
       category: "Backend",
-      icon: "🟢",
+      icon: <Server size={32} className="text-green-500" />,
       color: "text-green-500",
       description: "JavaScript runtime"
     },
     {
       name: "Flutter",
       category: "Mobile",
-      icon: "🦋",
+      icon: <Smartphone size={32} className="text-blue-300" />,
       color: "text-blue-300",
       description: "Cross-platform apps"
     },
     {
       name: "React Native",
       category: "Mobile",
-      icon: "📱",
+      icon: <Smartphone size={32} className="text-cyan-400" />,
       color: "text-cyan-400",
       description: "Native mobile apps"
     },
     {
       name: "iOS",
       category: "Mobile",
-      icon: "🍎",
+      icon: <Smartphone size={32} className="text-gray-300" />,
       color: "text-gray-300",
       description: "Native iOS apps"
     },
     {
       name: "Android",
       category: "Mobile",
-      icon: "🤖",
+      icon: <Smartphone size={32} className="text-green-400" />,
       color: "text-green-400",
       description: "Native Android apps"
     },
     {
       name: "AWS",
       category: "Cloud",
-      icon: "☁️",
+      icon: <Cloud size={32} className="text-orange-400" />,
       color: "text-orange-400",
       description: "Amazon Web Services"
     },
     {
       name: "GCP",
       category: "Cloud",
-      icon: "🌩️",
+      icon: <Cloud size={32} className="text-blue-500" />,
       color: "text-blue-500",
       description: "Google Cloud Platform"
     },
     {
       name: "Azure",
       category: "Cloud",
-      icon: "🔷",
+      icon: <Cloud size={32} className="text-blue-600" />,
       color: "text-blue-600",
       description: "Microsoft Azure"
     },
     {
       name: "AMP",
       category: "Performance",
-      icon: "⚡",
+      icon: <Zap size={32} className="text-yellow-300" />,
       color: "text-yellow-300",
       description: "Accelerated pages"
     },
     {
       name: "PWA",
       category: "Performance",
-      icon: "📲",
+      icon: <Globe size={32} className="text-purple-400" />,
       color: "text-purple-400",
       description: "Progressive Web Apps"
     },
     {
       name: "GraphQL",
       category: "API",
-      icon: "🔗",
+      icon: <Link size={32} className="text-pink-400" />,
       color: "text-pink-400",
       description: "Query language"
     },
     {
       name: "MongoDB",
       category: "Database",
-      icon: "🍃",
+      icon: <Database size={32} className="text-green-600" />,
       color: "text-green-600",
       description: "NoSQL database"
     }
@@ -191,12 +192,12 @@ const TechnologiesSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
                 {/* Tech icon */}
-                <div className="text-4xl mb-3 group-hover:animate-bounce relative z-10">
+                <div className="mb-3 group-hover:animate-bounce relative z-10 flex justify-center">
                   {tech.icon}
                 </div>
                 
                 {/* Tech name */}
-                <h3 className={`font-bold mb-2 group-hover:${tech.color} transition-colors duration-300 relative z-10`}>
+                <h3 className={`font-bold mb-2 text-white group-hover:${tech.color} transition-colors duration-300 relative z-10`}>
                   {tech.name}
                 </h3>
                 
@@ -219,12 +220,24 @@ const TechnologiesSection = () => {
         </div>
 
         {/* Floating tech particles */}
-        <div className="absolute top-20 left-20 text-2xl animate-float opacity-20">⚛️</div>
-        <div className="absolute top-40 right-32 text-xl animate-float opacity-15" style={{ animationDelay: '1s' }}>🐍</div>
-        <div className="absolute bottom-32 left-32 text-3xl animate-float opacity-10" style={{ animationDelay: '2s' }}>☁️</div>
-        <div className="absolute bottom-20 right-20 text-lg animate-float opacity-25" style={{ animationDelay: '3s' }}>📱</div>
-        <div className="absolute top-1/2 left-10 text-xl animate-float opacity-15" style={{ animationDelay: '4s' }}>🦋</div>
-        <div className="absolute top-1/3 right-10 text-2xl animate-float opacity-20" style={{ animationDelay: '5s' }}>⚡</div>
+        <div className="absolute top-20 left-20 animate-float opacity-20">
+          <Code size={24} className="text-cyan-400" />
+        </div>
+        <div className="absolute top-40 right-32 animate-float opacity-15" style={{ animationDelay: '1s' }}>
+          <Database size={20} className="text-cyan-400" />
+        </div>
+        <div className="absolute bottom-32 left-32 animate-float opacity-10" style={{ animationDelay: '2s' }}>
+          <Cloud size={28} className="text-cyan-400" />
+        </div>
+        <div className="absolute bottom-20 right-20 animate-float opacity-25" style={{ animationDelay: '3s' }}>
+          <Smartphone size={16} className="text-cyan-400" />
+        </div>
+        <div className="absolute top-1/2 left-10 animate-float opacity-15" style={{ animationDelay: '4s' }}>
+          <Server size={20} className="text-cyan-400" />
+        </div>
+        <div className="absolute top-1/3 right-10 animate-float opacity-20" style={{ animationDelay: '5s' }}>
+          <Zap size={24} className="text-cyan-400" />
+        </div>
 
         {/* Animated connecting lines */}
         <div className="absolute top-1/2 left-1/4 w-32 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30 animate-pulse"></div>

@@ -27,6 +27,12 @@ const Header = () => {
           Home
         </button>
         <button
+          onClick={() => scrollToSection("technologies")}
+          className="dark-nav-link"
+        >
+          Technologies
+        </button>
+        <button
           onClick={() => scrollToSection("services")}
           className="dark-nav-link"
         >
@@ -43,6 +49,12 @@ const Header = () => {
           className="dark-nav-link"
         >
           Portfolio
+        </button>
+        <button
+          onClick={() => scrollToSection("testimonials")}
+          className="dark-nav-link"
+        >
+          Testimonials
         </button>
         <button
           onClick={() => scrollToSection("contact")}
@@ -71,6 +83,12 @@ const Header = () => {
               Home
             </button>
             <button
+              onClick={() => scrollToSection("technologies")}
+              className="dark-nav-link text-left"
+            >
+              Technologies
+            </button>
+            <button
               onClick={() => scrollToSection("services")}
               className="dark-nav-link text-left"
             >
@@ -87,6 +105,12 @@ const Header = () => {
               className="dark-nav-link text-left"
             >
               Portfolio
+            </button>
+            <button
+              onClick={() => scrollToSection("testimonials")}
+              className="dark-nav-link text-left"
+            >
+              Testimonials
             </button>
             <button
               onClick={() => scrollToSection("contact")}

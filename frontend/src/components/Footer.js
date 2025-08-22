@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-bold text-white mb-4">Coders</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">KCoders</h3>
             <p className="text-gray-400 mb-6 max-w-md">
               We craft digital excellence through innovative mobile and web solutions. 
               Transform your ideas into powerful applications that drive business success.
@@ -109,7 +109,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 mb-4 md:mb-0">
-            © {currentYear} Coders. All rights reserved.
+            © {currentYear} KCoders. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">

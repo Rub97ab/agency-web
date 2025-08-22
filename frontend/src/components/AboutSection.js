@@ -34,7 +34,7 @@ const AboutSection = () => {
       <div className="absolute top-32 right-20 animate-float opacity-15" style={{ animationDelay: '2s' }}>
         <Rocket size={28} className="text-cyan-400" />
       </div>
-      <div className="absolute bottom-24 left-24 animate-float opacity-12" style={{ animationDelay: '4s' }}>
+      <div className="absolute bottom-24 left-20 animate-float opacity-12" style={{ animationDelay: '4s' }}>
         <Brain size={26} className="text-cyan-400" />
       </div>
       <div className="absolute bottom-40 right-16 animate-float opacity-18" style={{ animationDelay: '6s' }}>
@@ -44,7 +44,7 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="display-large mb-6 text-white">About Coders</h2>
+            <h2 className="display-large mb-6 text-white">About KCoders</h2>
             <p className="body-large mb-6 text-gray-300">
               We are a passionate team of developers and designers dedicated to creating exceptional digital experiences. 
               With years of expertise in mobile and web development, we transform complex ideas into simple, elegant solutions.
@@ -77,7 +77,7 @@ const AboutSection = () => {
             ))}
           </div>
         </div>
-
+{/* 
         <div className="mt-16 text-center">
           <h3 className="heading-1 mb-8 text-white">Our Technology Stack</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -106,7 +106,7 @@ const AboutSection = () => {
               <p className="text-gray-400">Cloud</p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -94,7 +94,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="heading-3 text-white mb-2 group-hover:text-cyan-400 transition-colors">Email Us</h4>
-                  <p className="text-gray-400 group-hover:text-gray-300 transition-colors">rub97ab@gmail.com</p>
+                  <p className="text-gray-400 group-hover:text-gray-300 transition-colors">info@kcoders.com</p>
                 </div>
               </div>
 
@@ -123,15 +123,15 @@ const ContactSection = () => {
               <h4 className="heading-3 text-white mb-4 group-hover:text-cyan-400 transition-colors">Why Choose Us?</h4>
               <ul className="space-y-3">
                 <li className="flex items-center text-gray-300 group-hover:text-white transition-colors">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 animate-pulse"></div>
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 "></div>
                   Fast delivery and responsive communication
                 </li>
                 <li className="flex items-center text-gray-300 group-hover:text-white transition-colors">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 " ></div>
                   Expert team with proven track record
                 </li>
                 <li className="flex items-center text-gray-300 group-hover:text-white transition-colors">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 animate-pulse" style={{ animationDelay: '1s' }}></div>
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 " ></div>
                   Post-launch support and maintenance
                 </li>
               </ul>

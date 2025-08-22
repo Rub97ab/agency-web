@@ -71,14 +71,15 @@ const ServicesSection = () => {
 
   return (
     <section id="services" className="py-24 px-4 lg:px-8" ref={sectionRef}>
-      <div className="max-w-7xl mx-auto">
+    
+    <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="display-large mb-6 text-white scroll-reveal">Our Services</h2>
-          <p className="body-large max-w-3xl mx-auto text-gray-300 scroll-reveal">
+          <h2 className="display-large mb-6 text-white animate-fade-in-up">Our Services</h2>
+          <p className="body-large max-w-3xl mx-auto text-gray-300 animate-fade-in-up animate-delay-1">
             We offer comprehensive mobile and web development services to bring your digital vision to life
           </p>
         </div>
-
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
@@ -103,7 +104,7 @@ const ServicesSection = () => {
                     className="text-gray-400 flex items-center group-hover:text-gray-300 transition-colors duration-300"
                     style={{ transitionDelay: `${featureIndex * 0.05}s` }}
                   >
-                    <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 group-hover:animate-pulse"></div>
+                    <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 "></div>
                     {feature}
                   </li>
                 ))}
@@ -117,11 +118,12 @@ const ServicesSection = () => {
 
         {/* Animated decorative elements */}
         <div className="relative mt-16">
-          <div className="absolute top-0 left-1/4 w-px h-20 bg-gradient-to-b from-cyan-400 to-transparent opacity-30 animate-pulse"></div>
-          <div className="absolute top-0 right-1/4 w-px h-20 bg-gradient-to-b from-cyan-400 to-transparent opacity-30 animate-pulse" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute top-0 left-1/2 w-px h-20 bg-gradient-to-b from-cyan-400 to-transparent opacity-30 animate-pulse" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-0 left-1/4 w-px h-20 bg-gradient-to-b from-cyan-400 to-transparent opacity-30 "></div>
+          <div className="absolute top-0 right-1/4 w-px h-20 bg-gradient-to-b from-cyan-400 to-transparent opacity-30 " style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-0 left-1/2 w-px h-20 bg-gradient-to-b from-cyan-400 to-transparent opacity-30 " style={{ animationDelay: '2s' }}></div>
         </div>
-      </div>
+        </div>
+      
     </section>
   );
 };

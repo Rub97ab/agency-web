@@ -133,7 +133,7 @@ const PortfolioSection = () => {
                 />
                 
                 {/* Animated overlay */}
-                <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                {/* <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <div className="flex space-x-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     <button 
                       onClick={() => openProjectModal(project)}
@@ -148,7 +148,7 @@ const PortfolioSection = () => {
                       <Github size={18} />
                     </button>
                   </div>
-                </div>
+                </div> */}
 
                 {/* Gradient overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-300`}></div>
@@ -156,15 +156,15 @@ const PortfolioSection = () => {
               
               <div className="p-6 relative">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-cyan-400 text-sm font-medium flex items-center group-hover:animate-pulse">
+                  <span className="text-cyan-400 text-sm font-medium flex items-center ">
                     <span className="transform group-hover:scale-110 transition-transform duration-300">
                       {project.icon}
                     </span>
                     <span className="ml-2">{project.type}</span>
                   </span>
-                  {hoveredCard === project.id && (
+                  {/* {hoveredCard === project.id && (
                     <div className="w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
-                  )}
+                  )} */}
                 </div>
                 
                 <h3 className="heading-3 mb-3 text-white group-hover:text-cyan-400 transition-colors duration-300">
@@ -196,7 +196,7 @@ const PortfolioSection = () => {
         <div className="text-center mt-12">
           <button
             onClick={() => document.getElementById("contact").scrollIntoView({ behavior: "smooth" })}
-            className="btn-primary btn-shine group animate-pulse"
+            className="btn-primary btn-shine group"
           >
             Start Your Project
             <div className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300">

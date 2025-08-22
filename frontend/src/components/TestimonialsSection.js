@@ -13,7 +13,7 @@ const TestimonialsSection = () => {
       company: "TechStart Inc.",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b2bb?auto=format&fit=crop&w=150&q=80",
       rating: 5,
-      text: "Coders transformed our vision into a stunning mobile app that exceeded all expectations. Their attention to detail and technical expertise is unmatched. The app has been instrumental in growing our user base by 300%.",
+      text: "KCoders transformed our vision into a stunning mobile app that exceeded all expectations. Their attention to detail and technical expertise is unmatched. The app has been instrumental in growing our user base by 300%.",
       project: "E-commerce Mobile App"
     },
     {
@@ -23,7 +23,7 @@ const TestimonialsSection = () => {
       company: "InnovateFlow",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80",
       rating: 5,
-      text: "Working with Coders was a game-changer for our business. They delivered a complex web platform on time and within budget. Their team's communication and technical skills are top-notch.",
+      text: "Working with KCoders was a game-changer for our business. They delivered a complex web platform on time and within budget. Their team's communication and technical skills are top-notch.",
       project: "Business Analytics Dashboard"
     },
     {
@@ -43,7 +43,7 @@ const TestimonialsSection = () => {
       company: "FoodieConnect",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
       rating: 5,
-      text: "Our food delivery platform is now the most popular in the region, thanks to Coders. The multi-platform solution with real-time GPS tracking works flawlessly. Exceptional work!",
+      text: "Our food delivery platform is now the most popular in the region, thanks to KCoders. The multi-platform solution with real-time GPS tracking works flawlessly. Exceptional work!",
       project: "Food Delivery Platform"
     },
     {
@@ -53,7 +53,7 @@ const TestimonialsSection = () => {
       company: "SocialBuzz Media",
       image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80",
       rating: 5,
-      text: "The social media app they developed has revolutionized how our users connect. The real-time messaging and photo sharing features are seamless. Coders delivers excellence every time.",
+      text: "The social media app they developed has revolutionized how our users connect. The real-time messaging and photo sharing features are seamless. KCoders delivers excellence every time.",
       project: "Social Media App"
     },
     {

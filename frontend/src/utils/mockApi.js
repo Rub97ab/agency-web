@@ -1,32 +1,43 @@
+import emailjs from "@emailjs/browser";
 // Mock API for frontend-only demonstration
 export const mockApi = {
-  // Simulate contact form submission
-  submitContactForm: async (formData) => {
-    // Simulate API delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    // Log the form data (in real implementation, this would be sent to backend)
-    console.log("Contact form submitted:", formData);
-    console.log("Email would be sent to: rub97ab@gmail.com");
-    
-    // Simulate success response
-    return {
-      success: true,
-      message: "Contact form submitted successfully",
-      data: formData
-    };
+  submitContactForm: async (formData, Service_Id, template_id, public_key) => {
+    try {
+      // Send email via EmailJS
+      const result = await emailjs.send(
+        Service_Id, template_id,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          company: formData.company,
+          project_type: formData.projectType,
+          budget: formData.budget,
+          message: formData.message,
+        },
+        public_key
+      );
+
+      console.log("EmailJS response:", result);
+
+      return {
+        success: true,
+        message: "Contact form submitted successfully via EmailJS",
+        data: formData,
+      };
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      return {
+        success: false,
+        message: "Failed to send contact form",
+      };
+    }
   },
 
-  // Simulate getting portfolio projects
   getPortfolioProjects: async () => {
-    await new Promise(resolve => setTimeout(resolve, 500));
-    
+    await new Promise((resolve) => setTimeout(resolve, 500));
     return {
       success: true,
-      projects: [
-        // This would normally come from a database
-        // Currently using static data in PortfolioSection component
-      ]
+      projects: [],
     };
-  }
+  },
 };

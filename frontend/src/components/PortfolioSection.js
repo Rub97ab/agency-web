@@ -37,7 +37,7 @@ const PortfolioSection = () => {
       type: "Platform",
       technologies: ["Flutter", "Firebase", "Google Maps", "Payment Gateway"],
       icon: <Smartphone size={20} />,
-      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?auto=format&fit=crop&w=800&q=80",
+      image: "/assets/FoodDelivery.png",
       gradient: "from-green-500 to-emerald-500"
     },
     {
@@ -47,7 +47,7 @@ const PortfolioSection = () => {
       type: "Web App",
       technologies: ["Next.js", "Node.js", "MySQL", "JWT Auth"],
       icon: <Globe size={20} />,
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&q=80",
+      image: "/assets/Health_Mng.png",
       gradient: "from-red-500 to-orange-500"
     },
     {

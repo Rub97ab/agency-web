@@ -45,19 +45,22 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus("");
+    const Service_Id = "service_azrnrsg";
+    const template_id = "template_mme4x6u";
+    const public_key = "Ou-_2oYZyPdQIAXey";
 
-    try {
-      await mockApi.submitContactForm(formData);
+     const response = await mockApi.submitContactForm(formData, Service_Id, template_id, public_key);
+      if(response.success) {
       setSubmitStatus("success");
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        projectType: "",
-        budget: "",
-        message: ""
-      });
-    } catch (error) {
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          projectType: "",
+          budget: "",
+          message: ""
+        });}
+     else {
       setSubmitStatus("error");
     }
 

@@ -100,7 +100,7 @@ const ContactSection = () => {
                   <p className="text-gray-400 group-hover:text-gray-300 transition-colors">info@kcoders.com</p>
                 </div>
               </div>
-
+{/* 
               <div className="flex items-start space-x-4 group cursor-pointer">
                 <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center group-hover:animate-bounce transition-all duration-300">
                   <Phone size={20} className="text-black" />
@@ -109,9 +109,9 @@ const ContactSection = () => {
                   <h4 className="heading-3 text-white mb-2 group-hover:text-cyan-400 transition-colors">Call Us</h4>
                   <p className="text-gray-400 group-hover:text-gray-300 transition-colors">+1 (555) 123-4567</p>
                 </div>
-              </div>
+              </div> */}
 
-              <div className="flex items-start space-x-4 group cursor-pointer">
+              {/* <div className="flex items-start space-x-4 group cursor-pointer">
                 <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center group-hover:animate-bounce transition-all duration-300">
                   <MapPin size={20} className="text-black" />
                 </div>
@@ -119,7 +119,7 @@ const ContactSection = () => {
                   <h4 className="heading-3 text-white mb-2 group-hover:text-cyan-400 transition-colors">Location</h4>
                   <p className="text-gray-400 group-hover:text-gray-300 transition-colors">Available Worldwide<br />Remote Team</p>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <div className="mt-8 p-6 bg-black border border-gray-800 rounded-lg group hover:border-cyan-400 transition-all duration-300">

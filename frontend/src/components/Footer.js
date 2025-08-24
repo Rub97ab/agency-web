@@ -1,15 +1,17 @@
 import React from "react";
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+// import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
+import { useScrollToSection } from "../hooks/useScrollToSection";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const scrollToSection = useScrollToSection();
+  // const scrollToSection = (sectionId) => {
+  //   const element = document.getElementById(sectionId);
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
 
   return (
     <footer className="bg-black border-t border-gray-800 py-16 px-4 lg:px-8">
@@ -19,10 +21,10 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-bold text-white mb-4">KCoders</h3>
             <p className="text-gray-400 mb-6 max-w-md">
-              We craft digital excellence through innovative mobile and web solutions. 
+              We craft digital excellence through innovative mobile and web solutions.
               Transform your ideas into powerful applications that drive business success.
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:bg-cyan-400 hover:text-black transition-colors">
                 <Github size={20} />
               </a>
@@ -35,7 +37,7 @@ const Footer = () => {
               <a href="mailto:rub97ab@gmail.com" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:bg-cyan-400 hover:text-black transition-colors">
                 <Mail size={20} />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
@@ -111,13 +113,28 @@ const Footer = () => {
           <p className="text-gray-400 mb-4 md:mb-0">
             © {currentYear} KCoders. All rights reserved.
           </p>
+
           <div className="flex space-x-6">
-            <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
+            <Link
+              to="/privacy-policy" onClick={() => scrollIntoView({ behavior: "smooth" })}
+              className="text-gray-400 hover:text-cyan-400 transition-colors"
+            >
               Privacy Policy
-            </a>
-            <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
+            </Link>
+            <Link
+              to="/terms-conditions" onClick={() => scrollIntoView({ behavior: "smooth" })}
+              className="text-gray-400 hover:text-cyan-400 transition-colors"
+            >
               Terms of Service
-            </a>
+            </Link>
+
+            <button
+              onClick={() => scrollToSection("testimonials")}
+              className="text-gray-400 hover:text-cyan-400 transition-colors"
+            >
+
+            </button>
+
           </div>
         </div>
       </div>

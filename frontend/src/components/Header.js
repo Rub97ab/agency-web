@@ -1,21 +1,35 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useScrollToSection } from "../hooks/useScrollToSection";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const scrollToSection = useScrollToSection();
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false);
-    }
-  };
+  // const scrollToSection = (sectionId) => {
+  //   const element = document.getElementById(sectionId);
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: "smooth" });
+  //     setIsMenuOpen(false);
+  //   }
+  // };
 
   return (
     <header className="dark-header fixed top-0 left-0 w-full z-50">
       <div className="flex items-center">
-        <h1 className="text-2xl font-bold text-white">KCoders</h1>
+    
+      <div 
+  onClick={() => scrollToSection("hero")} 
+  className="flex items-center space-x-2 cursor-pointer"
+>
+  <img 
+    alt="Icon" 
+    src="/assets/icon.png" 
+    style={{ maxWidth: "11%", height: "auto", borderRadius: "50%" }} 
+  />
+  <h1 className="text-2xl font-bold text-white">KCoders</h1>
+</div>
       </div>
 
       {/* Desktop Navigation */}

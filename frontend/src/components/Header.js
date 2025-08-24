@@ -25,7 +25,7 @@ const Header = () => {
 >
   <img 
     alt="Icon" 
-    src="/assets/icon.png" 
+    src="/assets/Icon.png" 
     style={{ maxWidth: "11%", height: "auto", borderRadius: "50%" }} 
   />
   <h1 className="text-2xl font-bold text-white">KCoders</h1>
